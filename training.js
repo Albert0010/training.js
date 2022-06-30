@@ -136,7 +136,6 @@
 
 
 
-console.log((q));
 //7. sameWord:
 // let array1 = ["dog","cat","parrot"];
 // let array2 = ["lizard","rat","cat","dog"];
