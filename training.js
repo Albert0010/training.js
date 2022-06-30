@@ -8,14 +8,14 @@
 
 //2.  Create an obj
 // const obj = {name:'Albert'};
-// Arajin exanak   const key = 'Acqeri guyn';
-//                 obj[key] = 'brown';
-// Erkrord exanak  obj.age = 19;
-//Errord exanak    obj['Erkir'] = 'Armenia';
+// const key = 'Acqeri guyn';
+// obj[key] = 'brown';
+// obj.age = 19;
+// obj['Erkir'] = 'Armenia';
 
 //3.Find Unique in Array
 // First variant
-// let x = ["a","a","a","j","a"];
+// let x = ["j","a","a","a","a"];
 //
 // let FindUnique = (arr) => {
 //
@@ -76,6 +76,7 @@
 //      newarr.push(min,max);
 //     return newarr;
 // }
+// console.log(MaxandMininArray(arr));
 
 //5.separatedArr (odd/even)
 // let array = [1,2,3,4,5,6];
@@ -94,19 +95,6 @@
 // }
 //
 // console.log(separatedArr(array));
-// const f = (arr,n) => {
-//     let result = [];
-//     let k = 0;
-//     let len = arr.length;
-//     for (let i = 0; i < n; i++) {
-//         result[k] = arr[len-1];
-//
-//         len--;
-//         k++;
-//     }
-//     return result;
-// }
-// console.log(f(www,6));
 
 //6. FindUnique
 // let x = [222,1,2,3,19,3,5,4,4,4,29];
@@ -132,9 +120,6 @@
 // }
 //
 // console.log(FindUnique(x));
-
-
-
 
 //7. sameWord:
 // let array1 = ["dog","cat","parrot"];
@@ -205,6 +190,8 @@
 // }
 // console.log(doindexedArr(array,inArr));
 
+
+
 //11. reverse functian
 // let str = "Albert";
 //  const reverse = (word) =>{
@@ -224,8 +211,12 @@
 
 //advanced homework
 
-//MainDiaganal in matrix
-// let array = [1,2,3,4,5,6,7,8,9];
+//4.MainDiaganal in matrix
+// let array = [
+//     1,2,3,4,
+//     5,6,7,8,
+//     9, 10,11,12,
+//     13,14,15,16];
 // const ArrayToMatrix = (arr) => {
 //        let len = Math.sqrt(arr.length);
 //        let matrix = [];
