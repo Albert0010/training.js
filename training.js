@@ -15,7 +15,7 @@
 
 //3.Find Unique in Array
 // First variant
-// let x = ["j","a","a","a","a"];
+// let x = ["a","a","a","j","a"];
 //
 // let FindUnique = (arr) => {
 //
@@ -59,24 +59,12 @@
 // let arr = [14,59,3,8,2];
 // const MaxandMininArray = (arr) => {
 //     let newarr = [];
-//     let max = arr.reduce(function(aggr,val){
-//         if(val>aggr){
-//             aggr = val;
-//             return aggr;
-//         }
-//         return aggr;
-//     })
-//     let min = arr.reduce(function(aggr,val){
-//         if(val<aggr){
-//             aggr = val;
-//             return aggr;
-//         }
-//         return aggr;
-//     })
+//     let max = Math.max(...arr);
+//     let min = Math.min(...arr);
 //      newarr.push(min,max);
 //     return newarr;
 // }
-// console.log(MaxandMininArray(arr));
+// console.log((MaxandMininArray(arr)));
 
 //5.separatedArr (odd/even)
 // let array = [1,2,3,4,5,6];
@@ -204,9 +192,6 @@
 //
 //  console.log(reverse(str));
 
-
-
-
 //advanced homework
 
 //4.MainDiaganal in matrix
@@ -229,12 +214,12 @@
 //        return matrix;
 // }
 // let matrix = ArrayToMatrix(array);
-// const mainDiagonal = (mat) => {
+// const mainDiagonal = (mxt) => {
 //     let sum = 0;
-//     for (let i = 0; i <mat.length; i++) {
-//         for (let j = 0; j < mat.length; j++) {
+//     for (let i = 0; i <mxt.length; i++) {
+//         for (let j = 0; j < mxt.length; j++) {
 //             if( i === j){
-//                 sum = sum + mat[i][j];
+//                 sum += mxt[i][j];
 //             }
 //         }
 //     }
@@ -314,5 +299,43 @@
 // console.log(RepeatedCountArr(lookup,strings));
 
 
+// let counter = (function() {
+//     let privateCounter = 0;
+//     function changeBy(val) {
+//         privateCounter += val;
+//     }
+//
+//     return {
+//         increment: function() {
+//             changeBy(1);
+//         },
+//
+//         decrement: function() {
+//             changeBy(-1);
+//         },
+//
+//         value: function() {
+//             return privateCounter;
+//         }
+//     };
+// })();
+//
+// console.log(counter.value());  // 0.
+//
+// counter.increment();
+// counter.increment();
+// console.log(counter.value());  // 2.
+//
+// counter.decrement();
+// console.log(counter.value());  // 1.
 
 
+
+let obj = {
+    name:"Albert",
+    age: 19
+};
+
+
+
+// Solved
