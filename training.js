@@ -1,341 +1,347 @@
 //Regular Homework
 
-//1. Makequestion
-// const MakeQuestion = (oprd1,oprd2,opr) => {
-//     return "What is " + oprd1 +  opr  + oprd2 + "?" ;
+// 1) Make an array of numbers that are doubles of the first array
+// function doubleNumbers(arr){
+//     return arr.map(function (value, index) {
+//         return value*2;
+//     })
 // }
-// console.log(MakeQuestion(1,2,"+"));
+// console.log(doubleNumbers([2, 5, 100]));
 
-//2.  Create an obj
-// const obj = {name:'Albert'};
-// const key = 'Acqeri guyn';
-// obj[key] = 'brown';
-// obj.age = 19;
-// obj['Erkir'] = 'Armenia';
+// 2) Take an array of numbers and make them strings
+// function stringItUp(arr){
+//     return arr.map(function (value) {
+//         return value + "";
+//     })
+// }
+// console.log(stringItUp([2, 5, 100]));
 
-//3.Find Unique in Array
-// First variant
-// let x = ["a","a","a","j","a"];
-//
-// let FindUnique = (arr) => {
-//
-//     for (let i = 0; i < arr.length; i++) {
-//         let answer = true ;
-//         for (let j = 0; j < arr.length; j++) {
-//             if( i === j ){
-//                 continue;
-//             }
-//             else if (arr[i] === arr[j]){
-//                 answer = false;
-//                 break;
-//             }
-//         }
-//         if(answer){
-//             return arr[i];
-//         }
+// / 3) Capitalize each of an array of names
+// function capitalizeNames(arr){
+//     return arr.map(function (value,) {
+//         let str = value.toLowerCase();
+//         const resStr = str.substring(0, 1).toUpperCase() + str.substring(1, str.length);
+//         return resStr;
+//     })
+// }
+// console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
+
+// 4) Make an array of strings of the names
+// function namesOnly(arr){
+//     return arr.map(function (value) {
+//         return value.name;
+//     })
+// }
+// console.log(namesOnly([
+//     {
+//         name: "Angelina Jolie",
+//         age: 80
+//     },
+//     {
+//         name: "Eric Jones",
+//         age: 2
+//     },
+//     {
+//         name: "Paris Hilton",
+//         age: 5
+//     },
+//     {
+//         name: "Kayne West",
+//         age: 16
+//     },
+//     {
+//         name: "Bob Ziroll",
+//         age: 100
 //     }
-//     return "There all elements are the same";
-// }
-//
-// console.log(FindUnique(x));
-//
-// FindUnique
-// Second variant
-// let x = ["j","a","a","a"];
-//
-// let FindUnique = (arr) => {
-//     let result;
-//     for (let i = 0; i < arr.length; i++) {
-//          result  = arr.filter(function (val) {
-//             return val !== arr[i];
-//         });
-//     }
-//     return result[0] ;
-// }
-//
-// console.log(FindUnique(x));
+// ]));
 
-//4. Max&MininArray
-// let arr = [14,59,3,8,2];
-// const MaxandMininArray = (arr) => {
-//     let newarr = [];
-//     let max = Math.max(...arr);
-//     let min = Math.min(...arr);
-//      newarr.push(min,max);
-//     return newarr;
-// }
-// console.log((MaxandMininArray(arr)));
-
-//5.separatedArr (odd/even)
-// let array = [1,2,3,4,5,6];
-//
-// const separatedArr = (arr) => {
-//     let oddArr = [];
-//     let evenArr = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         if(arr[i] % 2 === 0){
-//             evenArr.push(arr[i]);
-//         }else{
-//             oddArr.push(arr[i]);
+// 5) Make an array of strings of the names saying whether or not they can go to The Matrix
+// function makeStrings(arr){
+//     return arr.map(function (value){
+//         if( value.age >= 18){
+//             return value.name + " can go to The Matrix";
 //         }
-//     }
-//     return {oddArr: oddArr, evenArr: evenArr};
+//         return  value.name + " is under age!!";
+//     })
 // }
-//
-// console.log(separatedArr(array));
+// console.log(makeStrings([
+//     {
+//         name: "Angelina Jolie",
+//         age: 80
+//     },
+//     {
+//         name: "Eric Jones",
+//         age: 2
+//     },
+//     {
+//         name: "Paris Hilton",
+//         age: 5
+//     },
+//     {
+//         name: "Kayne West",
+//         age: 16
+//     },
+//     {
+//         name: "Bob Ziroll",
+//         age: 100
+//     }
+// ]));
 
-//6. FindUnique
-// let x = [222,1,2,3,19,3,5,4,4,4,29];
-//
-// let FindUnique = (arr) => {
+// 6)  If the given input is an array of numbers, return the sum of all the positives ones. If the array is empty or there aren't any positive numbers, return 0.
+// const positiveSum = (arr) => {
+//     if(arr.length === 0){
+//         return  0;
+//     }
+//    let positiveNums =  arr.filter(function (value) {
+//         return value > 0;
+//     })
+//     if (positiveNums.length === 0){
+//         return 0;
+//     }
+//     return positiveNums.reduce(function (aggr, val) {
+//         return aggr + val;
+//     })
+// }
+// const input = [ 1, -4, 12, 0, -3, 29, -150];
+// console.log(positiveSum(input));
+
+// 7) Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
+// const input7 = [
+//     {
+//         name: 'John',
+//         age: 13
+//     },
+//     {
+//         name: 'Mark',
+//         age: 56,
+//     },
+//     {
+//         name: 'Rachel',
+//         age: 45,
+//     },
+//     {
+//         name: 'Nate',
+//         age: 70,
+//     },
+//     {
+//         name: 'Jeniffer',
+//         age: 65,
+//     }
+// ];
+// const difference = (arr) => {
 //     let resArr = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         let answer  = true ;
-//         for (let j = 0; j < arr.length; j++) {
-//             if( i === j ){
-//                 continue;
-//             }
-//             if (arr[i] === arr[j]){
-//                 answer = false;
-//                 break;
-//             }
-//         }
-//         if(answer){
-//             resArr.push(arr[i]);
-//         }
-//     }
+//    let filteredAge = arr.map(function (value) {
+//        return value.age;
+//    })
+//     let max = Math.max(...filteredAge);
+//     let min = Math.min(...filteredAge);
+//     let difference = max - min;
+//     resArr.push(min,max,difference);
 //     return resArr;
 // }
-//
-// console.log(FindUnique(x));
+// console.log(difference(input7));
 
-//7. sameWord:
-// let array1 = ["dog","cat","parrot"];
-// let array2 = ["lizard","rat","cat","dog"];
-// const sameWord = (arr1,arr2) => {
-//     let result = [];
-//     for (let i = 0; i < arr1.length; i++) {
-//         for (let j = 0; j < arr2.length; j++) {
-//             if(arr1[i] === arr2[j]){
-//                 result.push(arr1[i]);
-//             }
-//         }
-//     }
-//     return result;
-// }
-// console.log(sameWord(array1,array2));
-
-//8. ContainArr
-// let array1 = ["monday","tuesday","friday"];
-// let array2 = ["tuesday","friday"];
-//
-// const ContainArr = (arr1,arr2) => {
-//     let result ;
-//     for (let i = 0; i < arr2.length; i++) {
-//         for (let j = 0; j < arr1.length; j++) {
-//             if(arr2[i] === arr1[j]){
-//                 result = true;
-//                 break;
-//             }
-//             result = false;
-//         }
-//     }
-//     return result;
-// }
-// console.log(ContainArr(array1,array2));
-
-//9. sequenceArr
-// let array = ["b",6,"a","q",8,7,2];
-// const sequenceArr = (arr) => {
-//     let result =[];
-//     for (let i = 0; i < arr.length; i++) {
-//         if(typeof(arr[i]) === "number" ){
-//             result.push(arr[i]);
-//         }
-//     }
-//     for (let i = 0; i < arr.length; i++) {
-//         if(typeof(arr[i]) === "string" ){
-//             result.push(arr[i]);
-//         }
-//     }
-//     return result;
-// }
-// console.log(sequenceArr(array));
-
-//10. doIndexedArr
-// let array = ["mon","tue","wed","thur","fri"];
-// let inArr = [1,3,0];
-// const doindexedArr = (arr,indexArr) => {
-//     let indexedArr = [];
-//     for (let i = 0; i < indexArr.length; i++) {
-//         for (let j = 0; j < arr.length; j++) {
-//             if(indexArr[i] === j){
-//                 indexedArr.push(arr[j]);
-//             }
-//         }
-//     }
-//     return indexedArr;
-// }
-// console.log(doindexedArr(array,inArr));
-
-//11. reverse functian
-// let str = "Albert";
-//  const reverse = (word) =>{
-//      let arrStr = word.split("");
-//      let newstr = "";
-//      for (let i = arrStr.length - 1 ; i >= 0 ; i--) {
-//          newstr = newstr + arrStr[i];
-//      }
-//      return newstr;
-//  }
-//
-//
-//  console.log(reverse(str));
-
-//advanced homework
-
-//4.MainDiaganal in matrix
-// let array = [
-//     1,2,3,4,
-//     5,6,7,8,
-//     9, 10,11,12,
-//     13,14,15,16];
-// const ArrayToMatrix = (arr) => {
-//        let len = Math.sqrt(arr.length);
-//        let matrix = [];
-//        let k = -1;
-//        for (let i = 0; i < arr.length; i++) {
-//            if (i % len === 0){
-//                k++;
-//                matrix[k] = [];
-//            }
-//            matrix[k].push(arr[i]);
-//        }
-//        return matrix;
-// }
-// let matrix = ArrayToMatrix(array);
-// const mainDiagonal = (mxt) => {
-//     let sum = 0;
-//     for (let i = 0; i <mxt.length; i++) {
-//         for (let j = 0; j < mxt.length; j++) {
-//             if( i === j){
-//                 sum += mxt[i][j];
-//             }
-//         }
-//     }
-//     return sum;
-// }
-// console.log(mainDiagonal(matrix));
-
-//2.
-// let array = [1,2,3,4];
-//
-// const MaxAndMininObj = (arr) => {
-//     let obj = {};
-//     let max = 0;
-//     let min = 0;
-//     let arrMax = Math.max(...arr);
-//     let arrMin = Math.min(...arr);
-//     for (let i = 0; i < arr.length; i++) {
-//         if(arr[i] !== arrMin){
-//             max = max + arr[i];
-//         }
-//         if(arr[i] !== arrMax){
-//             min = min + arr[i];
-//         }
-//     }
-//     obj["max"] = max;
-//     obj["min"] = min;
-//     return obj;
-// }
-// console.log(MaxAndMininObj(array));
-
-//3.
-// let array = [1,2,2,1,3,3,4,4,5];
-//
-// const JuxtArray = (arr) => {
-//     let result;
-//     let result1 ;
-//     for (let i = 0; i < arr.length; i++) {
-//         for (let j = 0; j < arr.length; j++) {
-//             if( i === j ){
-//                 continue;
-//             }
-//             if(arr[i] !== arr[j]){
-//                 result1 = true;
-//             }else if (arr[i] === arr[j]){
-//                 result1 = false;
-//                 break;
-//             }
-//         }
-//         if(result1){
-//             result = arr[i];
-//         }
-//     }
-//     return result;
-// }
-//
-// console.log(JuxtArray(array));
-
-// //1. RepeatedCountArr
-// let lookup = ['i','love','sadakhlo','esiminch'];
-// let strings = ['i','i','sadakhlo','i','i','sadakhlo'];
-//
-// const RepeatedCountArr = (arr1,arr2) => {
-//     let count = 0;
-//     let newArr = [];
-//     for (let i = 0; i < arr1.length; i++) {
-//         for (let j = 0; j < arr2.length; j++) {
-//             if(arr1[i] === arr2[j]){
+//   8 )
+// const input8 = [
+//     ['a', 'b', 'c'],
+//     ['c', 'd', 'f'],
+//     ['d', 'f', 'g'],
+// ];
+// const objCount = function (arr) {
+//     let arr1 = arr.flat();
+//     return arr1.reduce(function (previousValue, currentValue,currentIndex) {
+//         let count = 0;
+//         for (let i = 0; i < arr1.length; i++) {
+//             if ( currentValue === arr1[i]){
 //                 count++;
 //             }
 //         }
-//         newArr.push(count);
-//         count = 0;
-//     }
-//     return newArr;
+//         Object.defineProperty(previousValue,currentValue,{
+//             value:count,
+//             writable:true,
+//             enumerable:true,
+//             configurable:true
+//         })
+//         return previousValue;
+//     },{})
 // }
-//
-// console.log(RepeatedCountArr(lookup,strings));
+// console.log(objCount(input8));
 
-
-// let counter = (function() {
-//     let privateCounter = 0;
-//     function changeBy(val) {
-//         privateCounter += val;
-//     }
-//
-//     return {
-//         increment: function() {
-//             changeBy(1);
-//         },
-//
-//         decrement: function() {
-//             changeBy(-1);
-//         },
-//
-//         value: function() {
-//             return privateCounter;
+// 9)
+// Given an array nums of size n, return the majority element.
+// const majority = (arr) => {
+//     let obj = arr.reduce(function (previousValue, currentValue,currentIndex) {
+//         let count = 0;
+//         for (let i = 0; i < arr.length; i++) {
+//             if ( currentValue === arr[i]){
+//                 count++;
+//             }
 //         }
-//     };
-// })();
-//
-// console.log(counter.value());  // 0.
-//
-// counter.increment();
-// counter.increment();
-// console.log(counter.value());  // 2.
-//
-// counter.decrement();
-// console.log(counter.value());  // 1.
+//         previousValue[currentValue] = count;
+//         return previousValue;
+//     },{})
+//     let values = Object.values(obj);
+//     let keys = Object.keys(obj);
+//     for (let i = 0; i < values.length; i++) {
+//         if(values[i] > arr.length/2){
+//             return keys.find( key => obj[key] === values[i]);
+//         }
+//     }
+// }
+// console.log(majority( [3,2,3]));
+
+// 10) gtnel trvats array i miji 3rd amenashate krknvox tive;
+// let array = [1,1,1,1,2,2,2,3,0,3,11,11,11,11,11,12,1,12,12,12,12];
+// const Repeted3rdElement = (arr) => {
+//         let obj =  arr.reduce(function (previousValue, currentValue,currentIndex) {
+//             let count = 0;
+//             for (let i = 0; i < arr.length; i++) {
+//             if ( currentValue === arr[i]){
+//                 count++;
+//             }
+//         }
+//         previousValue[currentValue] = count;
+//         return previousValue;
+//     },{})
+//     let values = Object.values(obj);
+//     let keys =   Object.keys(obj);
+//     let max = Math.max(...values);
+//     let ValuesWitoutMax = values.filter(function (value){
+//         return value !== max;
+//     })
+//     let max1 = Math.max(...ValuesWitoutMax);
+//      ValuesWitoutMax = ValuesWitoutMax.filter(function (value){
+//          return value !== max1;
+//      })
+//      return keys.find(key => obj[key] === Math.max(...ValuesWitoutMax));
+// }
+// console.log(Repeted3rdElement(array));
+
+// 11) Given a string s and an array of strings words, determine whether s is a prefix string of words.
+// const prefix = (str,arr) => {
+//     let result = false;
+//     let next = "";
+//     for (let i = 0; i < arr.length; i++) {
+//         next = next + arr[i];
+//         if(str === next){
+//             result = true;
+//             break;
+//         }
+//     }
+//     return result;
+// }
+// console.log(prefix("iloveleetcode",["i","love","leetcode","apples"]));
+
+// 12)
+// const phoneCountryCodes = {
+//     '+374': 'Armenia',
+//     '+375': 'Somali',
+//     '+376': 'Russia',
+//     '+377': 'Hoktemberyan',
+// }
+// const arrOfObjects = [
+//     {
+//         name: 'sarah',
+//         age: 32,
+//         phoneNumber: '+374000000',
+//         relation: 'nelly'
+//     },
+//     {
+//         name: 'nelly',
+//         age: 11,
+//         phoneNumber: '+3750020000',
+//         relation: 'sarah'
+//     }
+// ];
+// const referancetoSarahObject = arrOfObjects[0];
+// const referanceToNellyObject =  arrOfObjects[1];
+// arrOfObjects[0]["relation"] = referancetoSarahObject;
+// arrOfObjects[1]["relation"] = referanceToNellyObject;
+// const filteredObject = (arr) => {
+//     let codeskeys = Object.keys(phoneCountryCodes);
+//     let  phoneCodes = arr.map(function (value) {
+//         return value.phoneNumber;
+//     }).map(function (value) {
+//         return value.substring(0,4);
+//     });
+//     for (let i = 0; i < phoneCodes.length; i++) {
+//         for (let j = 0; j < codeskeys.length; j++) {
+//             if( phoneCodes[i] === codeskeys[j]){
+//                 arr[i]["country"] = phoneCountryCodes[phoneCodes[i]];
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// console.log(filteredObject(arrOfObjects));
 
 
+//Bonus xndir
+// const max = function (arr) {
+//   let max = -Infinity;
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] === undefined){
+//       continue;
+//     }
+//     if( arr[i] > max){
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// const min = function (arr) {
+//   let min = Infinity;
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] === undefined){
+//       continue;
+//     }
+//     if( arr[i] < min){
+//       min = arr[i];
+//     }
+//   }
+//   return min;
+// }
+// const students = [[1,6], [2,5], [4, 3]];
+// const Hertakanutyun = (arr) => {
+//   let result = [];
+//   const patrastvelujamanak = arr.map(function (value, index) {
+//     return value[0];
+//   })// [1,2,4]
+//   const patasxanelujamanak = arr.map(function (value, index) {
+//     return value[1];
+//   })// [6,5,3]
+//   for (let i = 0; i < patrastvelujamanak.length; i++) {
+//     if(patrastvelujamanak[i] === min(patrastvelujamanak)){
+//       result.push(i);
+//     }
+//   }
+//   const patasxaneluJamanakArancMax = patasxanelujamanak.map(function (value) {
+//     if(value === max(patasxanelujamanak)){
+//       return undefined;
+//     }
+//     return  value
+//   })
+//   const  foo = (array) => {                                               // array = patasxaneluJamanakArancMax
+//     let check = array.every(function (value) {
+//       return value === undefined;
+//     })
+//     if(check){
+//       return  result;
+//     }
+//     for (let i = 0; i < array.length; i++) {
+//       if( min(array) === array[i]){
+//         result.push(i);
+//       }
+//     }
+//     let a = array.map(function (val, index) {
+//       if(  val  === min(array)){
+//         return undefined;
+//       }
+//       return val;
+//     })
+//     return foo(a);
+//   }
+//   return  foo(patasxaneluJamanakArancMax);
+// }
+// console.log(Hertakanutyun(students));
 
-let obj = {
-    name:"Albert",
-    age: 19
-};
-
-
-
-// Solved
