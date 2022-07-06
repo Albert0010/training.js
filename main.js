@@ -100,7 +100,6 @@ let max = function (arr) {
     }
     return max;
 }
-
 let min = function (arr) {
     let min = Infinity;
     for (let i = 0; i < arr.length; i++) {
