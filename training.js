@@ -1,9 +1,5 @@
 //Regular Homework
 
-let f = function () {
-    console.log("hello");
-}
-
 // 1) Make an array of numbers that are doubles of the first array
 // function doubleNumbers(arr){
 //     return arr.map(function (value, index) {
